@@ -36,7 +36,7 @@ profit = 0
 
 def is_resource_sufficient(order_ingredients):
     for item in order_ingredients:
-        if order_ingredients[item] >= resources[item]:
+        if order_ingredients[item] > resources[item]:
             print(f'Sorry there is not enough {item}.')
             return False
     return True
@@ -75,7 +75,7 @@ while is_on:
                 serve(drinks['ingredients'])
                 profit += drinks["cost"]
                 change = round(payment - drinks["cost"], 2)
-                print(f"Enjoy your cup of coffee☕. Here's your change ${change}")
+                print(f"Enjoy your {coffee_choice}☕. Here's your change ${change}")
             else:
                 print(f"Insufficient payment. Here's your refund ${payment}")
 
