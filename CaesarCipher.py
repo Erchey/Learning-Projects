@@ -28,33 +28,33 @@ caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
         
 
 
-# def encode():
-#     encrypted_text = ''
-#     for n in text:
-#         for i in alphabet:
-#             index = alphabet.index(i)
+def encode():
+    encrypted_text = ''
+    for n in text:
+        for i in alphabet:
+            index = alphabet.index(i)
             
-#             if i == n:
-#                 index = (index + shift) % 26
-#                 encrypted_text += alphabet[index]
-#     print(f"Here's the encoded result: {encrypted_text}")
+            if i == n:
+                index = (index + shift) % 26
+                encrypted_text += alphabet[index]
+    print(f"Here's the encoded result: {encrypted_text}")
 
-# def decode():
-#     encrypted_text = ''
-#     for n in text:
-#         for i in alphabet:
-#             index = alphabet.index(i)
+def decode():
+    encrypted_text = ''
+    for n in text:
+        for i in alphabet:
+            index = alphabet.index(i)
             
-#             if i == n:
-#                 index = (index - shift) % 26
-#                 encrypted_text += alphabet[index]
-#     print(f"Here's the encoded result: {encrypted_text}")
-# if direction == 'encode':
-#     direction = encode()
-# elif direction == 'decode':
-#     direction = decode()
-# else:
-#     print('Enter a valid instruction!')
+            if i == n:
+                index = (index - shift) % 26
+                encrypted_text += alphabet[index]
+    print(f"Here's the encoded result: {encrypted_text}")
+if direction == 'encode':
+    direction = encode()
+elif direction == 'decode':
+    direction = decode()
+else:
+    print('Enter a valid instruction!')
 
 
 
