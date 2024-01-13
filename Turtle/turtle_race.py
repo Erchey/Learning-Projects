@@ -7,7 +7,7 @@ screen =  Screen()
 screen.setup(width=500, height=400)
 is_on = True
 turtles = []
-user_guess = screen.textinput(title="Make your bet", prompt="")
+user_guess = screen.textinput(title="Make your bet", prompt="Enter your guess:")
 
 for turtle in range(6):
     
@@ -26,8 +26,12 @@ while is_on:
 
         if turtle.xcor() > 230:
             computer_guess = turtle.pencolor()
+            computer_guesses = []
+            computer_guesses.append(computer_guess)
             if user_guess == computer_guess:
                 print('You Won')
+            elif len(computer_guesses) > 1:
+                print(f"It's a tie between ".join(map(str, computer_guesses)))
             else:
                 print(f'You Lost. The winner is {computer_guess}')
             is_on = False
