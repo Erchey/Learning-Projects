@@ -12,4 +12,4 @@ data_dict = {
     'Count': [gray_squirrels, red_squirrels, black_squirrels]
 }
 dataframe = pandas.DataFrame(data_dict)
-print(dataframe.to_csv())
+print(dataframe)
