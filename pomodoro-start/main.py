@@ -66,13 +66,6 @@ window = Tk()
 window.title('Pomodoro')
 window.config(padx=100, pady=50, bg=YELLOW)
 
-
-def say_something(a, b, c):
-    print(a)
-    print(b)
-    print(c)
-
-
 title_label = Label(text='Timer', fg=GREEN, font=(FONT_NAME, 50, 'bold'), bg=YELLOW)
 title_label.grid(column=1, row=0)
 
