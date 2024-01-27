@@ -1,1 +1,6 @@
-Facebook | okpala@gmail.com | JI78QMP#oXNW*9I
+{
+    "Amazon": {
+        "email": "okpala@gmail.com",
+        "password": "U&+3wnQZkyv5%"
+    }
+}
