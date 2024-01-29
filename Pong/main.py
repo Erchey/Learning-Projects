@@ -12,7 +12,7 @@ screen.tracer(0)
 r_paddle = Paddle1((350, 0))
 l_paddle = Paddle1((-350, 0))
 ball = Ball()
-scoreboard =  Scoreboard()
+scoreboard = Scoreboard()
 
 screen.listen()
 screen.onkeypress(r_paddle.Up, 'Up')
@@ -26,15 +26,15 @@ while game_is_on:
     screen.update()
     ball.move()
 
-    #Detect Collision with wall
+    # Detect Collision with wall
     if ball.ycor() > 280 or ball.ycor() < -280:
         ball.bounce_y()
 
-    #Detect collision with r_paddle
+    # Detect collision with r_paddle
     if ball.distance(r_paddle) < 50 and ball.xcor() > 325 or ball.distance(l_paddle) < 50 and ball.xcor() < -325:
         ball.bounce_x()
 
-    #if ball goes beyond bound
+    # if ball goes beyond bound
     if ball.xcor() > 420:
         ball.reset_position()
         scoreboard.l_point()
