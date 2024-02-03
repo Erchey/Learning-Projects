@@ -2,10 +2,9 @@ import requests
 from datetime import datetime
 import os
 
-APP_ID = os.getenv('APP_ID')
-API_KEY = os.getenv('API_KEY')
-sheet_endpoint = os.getenv('SHEET_ENDPOINT')
-
+APP_ID = 'd0b75dcd'
+API_KEY = 'ffd9dd13a5f056f72685a17476f554ba'
+sheet_endpoint = 'https://api.sheety.co/d7d3a2b518511cb0571a8e129edd1462/copyOfMyWorkouts/workouts'
 domain = 'https://trackapi.nutritionix.com'
 end_point = '/v2/natural/exercise'
 
