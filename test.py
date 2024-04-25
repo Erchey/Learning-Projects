@@ -1,32 +1,42 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
+import random
+class Enemy():
+    
+    def __init__(self, type_of_enemy, health_points, attack_damage):
+        self.__type_of_enemy =  type_of_enemy
+        self.health_points = health_points
+        self.attack_damage = attack_damage
+    
+    def talk(self):
+        print('I am an enemy')
+    
+    def get_enemy(self):
+        return self.__type_of_enemy
+        
+    def sleep(self):
+        print('Animal sleeping')
 
-class LinkedList:
-    def __init__(self):
-        self.head = None
+class Zombie(Enemy):
 
-    def append(self, data):
-        new_node = Node(data)
-        if self.head is None:
-            self.head = new_node
-            return
-        last_node = self.head
-        while last_node.next:
-            last_node = last_node.next
-        last_node.next = new_node
+    def __init__(self, health_points, attack_damage):
+        super().__init__(type_of_enemy='Zombie', health_points=health_points, attack_damage=attack_damage)
+        
 
-    def print_list(self):
-        current_node = self.head
-        while current_node:
-            print(current_node.data, end=" ")
-            current_node = current_node.next
-        print()
+    def talk(self):
+        print('Grumbling')
 
-# Usage
-linked_list = LinkedList()
-linked_list.append(1)
-linked_list.append(2)
-linked_list.append(3)
-linked_list.print_list()
+    def attack(self):
+        print(f'{self.get_enemy()} has {self.health_points} health point and {self.attack_damage} attack')
+
+    def special_skill(self):
+        did_special_skill_work = random.random() > 0.5
+        if did_special_skill_work:
+            self.health_points += 2
+
+
+zombie = Zombie(100, 10)
+zombie.special_skill()
+zombie.attack()
+
+
+    
+

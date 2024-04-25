@@ -92,13 +92,14 @@ class LinkedList():
 
 
 
-if __name__ == '__main__':
-    ll = LinkedList()
-    ll.insert_at_end(79)
-    ll.insert_at_beginning(5)
-    ll.insert_at_beginning(89)
-    ll.insert_at_beginning(90)
-    ll.print()
-    ll.insert_values(['banana', 'mango', 'grapes', 'orange'])
-    ll.insert_after_value('banana', 'apple')
-    ll.print()
+# if __name__ == '__main__':
+#     ll = LinkedList()
+#     ll.insert_at_end(79)
+#     ll.insert_at_beginning(5)
+#     ll.insert_at_beginning(89)
+#     ll.insert_at_beginning(90)
+#     ll.print()
+#     ll.insert_values(['banana', 'mango', 'grapes', 'orange'])
+#     ll.insert_after_value('banana', 'apple')
+#     ll.print()
+
